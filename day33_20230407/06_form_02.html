@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    사는지역: 
+    <!-- city = Incheon 을 선택하면 선택값이 name에 담긴다 -->
+    <select name="city" id="">
+        <option value="">선택해주세요</option>
+        <option value="Incheon">인천</option>
+        <option value="Seoul">서울</option>
+        <option value="Jeju">제주</option>
+    </select>
+    <br>
+    성별: <br>
+    <!-- radio: 값을 하나만 선택 시 사용,
+                선택항목들의 name이 같아야함 -->
+        남: <input type="radio" name="gender" value="male">
+        여: <input type="radio" name="gender" value="female">
+    <br>
+    먹고싶은음식: <br>
+    <!-- checkbox: 여러개를 동시에 선택 시 사용,
+                    선택항목들의 name이 같아야함 -->
+    <input type="checkbox" name="food" value="chicken">치킨
+    <input type="checkbox" name="food" value="pizza">피자
+    <input type="checkbox" name="food" value="pig">삼겹살
+</body>
+</html>

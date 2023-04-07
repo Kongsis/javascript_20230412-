@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-1</title>
+</head>
+<style>
+    /* grid 적용을 위해선 배치하려는 요소의 부모 요소에
+        grid를 지정해야 함 */
+    .container {
+        display: grid;
+        /* 한줄에 배치할 요소 갯수 */
+        grid-template-columns: auto auto auto;
+        /* column-gap: 20px;
+        row-gap: 20px; */
+        gap: 10px
+    }
+    .item {
+        background-color: orange;
+        border: 1px solid red;
+        /* width: 300px;
+        height: 300px; */
+    }
+    .item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .item2 {
+        /* 열의 시작 위치 */
+        grid-column: 3;
+        /* 행의 시작위치와 끝 */
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .item5 {
+        /* grid-row: 3; */
+        /* /를 쓰면 앞에 숫자가 start, 뒤의 숫자가 end */
+        grid-column: 1/4;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item item1">div1</div>
+        <div class="item item2">div2</div>
+        <div class="item item3">div3</div>
+        <div class="item item4">div4</div>
+        <div class="item item5">div5</div>
+        <div class="item item6">div6</div>
+        <div class="item item7">div7</div>
+        <div class="item item8">div8</div>
+    </div>
+</body>
+</html>
