@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilbo</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <style>
+        button {
+            float: right;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+            color: black;
+            font-size: 14px;
+        }
+        .homebutton::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="homebutton mt-3 me-3">
+    <button onclick="fun1(this)">로그인</button>
+    <button onclick="fun2(this)">회원가입</button>
+    </div>
+    <div class="container mt-5">
+        <center>
+            <a href="https://www.google.com" target="_blank">
+                <img src="../images/google.png" width="300px" alt="">
+        </center>
+        <input type="text" id="search" name="search">
+    </div>
+</body>
+<script>
+    const fun1 = (ele1) => {
+        console.log("로그인");
+        console.log("ele1: ", ele1);
+    }
+    const fun2 = (ele2) => {
+        console.log("회원가입");
+        console.log("ele2: ", ele2);
+    }
+    const name=prompt("이름을 입력하세요.");
+    // alert("환영합니다, "+name+"님")
+    alert(`안녕하세요, ${name}님. 환영합니다.`)
+</script>
+</html>

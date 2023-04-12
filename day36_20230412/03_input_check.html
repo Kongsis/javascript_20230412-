@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h6>비밀번호</h6>
+        <input type="text" class="form-control" onblur="password_check()"
+                id="member-password" name="memberPassword">
+        <h6 id="password-result"></h6>
+
+        <h6>비밀번호확인</h6>
+        <input type="text" class="form-control" onblur="password_Recheck()"
+                id="member-result-password">
+        <h6 id="password-re-result"></h6>
+    </div>
+</body>
+<script>
+    const password_check = () => {
+        const password = document.getElementById("member-password").value;
+        const passwordResult = document.getElementById("password-result");
+        if(password.length == 0) {
+            passwordResult.innerHTML = "필수입력입니다"
+            passwordResult.style.color = "red";
+        } else if(password.length < 8 || password.length > 16) {
+            passwordResult.innerHTML = "8~16자로 입력해주세요"
+            passwordResult.style.color = "red";
+        } else if(password.length >= 8 && password.length <= 16) {
+            passwordResult.innerHTML = "좋아요"
+            passwordResult.style.color = "green";
+        }
+    }
+    const password_Recheck = () => {
+        const password = document.getElementById("member-password").value;
+        const rePassword = document.getElementById("member-result-password").value
+        const rePasswordResult = document.getElementById("password-re-result");
+        if(rePassword.length==0){
+            rePasswordResult.innerHTML = "필수입력입니다"
+            rePasswordResult.style.color = "red";
+        }else if(password == rePassword) {
+            rePasswordResult.innerHTML = "일치합니다"
+            rePasswordResult.style.color = "green";
+        } else {
+            rePasswordResult.innerHTML = "일치하지 않습니다"
+            rePasswordResult.style.color = "red";
+        }
+    }
+</script>
+</html>
